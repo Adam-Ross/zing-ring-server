@@ -1,0 +1,19 @@
+{
+  "name": "test-march-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemone server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.0",
+    "nodemon": "^3.1.0",
+    "pg": "^8.11.3"
+  }
+}
