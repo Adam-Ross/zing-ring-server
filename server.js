@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const dbConfig = require('./db/dbConfig')
 
 const {Pool} = require('pg')
@@ -7,6 +8,7 @@ const dotenv = require('dotenv')
 
 dotenv.config()
 const app = express()
+app.use(cors())
 const PORT = process.env.PORT || 3000
 
 const pool = new Pool(dbConfig)
