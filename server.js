@@ -11,7 +11,10 @@ const PORT = process.env.PORT || 3000
 
 const pool = new Pool(dbConfig)
 
-app.get('/', async (req, res, next) => {
+app.use(express.static('public'))
+
+
+app.get('/todos', async (req, res, next) => {
     try {
         const result = await pool.query('SELECT * FROM todos;')
         res.json(result.rows)
